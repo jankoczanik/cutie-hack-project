@@ -1,8 +1,13 @@
-name = input("What is you rname? ")
+import pygame
+from game import Game
 
-print(name)
+pygame.init()
 
-if (name == "janko"):
-    print("hi janko")
-else:
-    print("go away")
+mygame = Game()
+
+while mygame.running:
+    mygame.events()
+    mygame.draw()
+    mygame.tick()
+
+pygame.quit()
