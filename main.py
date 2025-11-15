@@ -7,7 +7,9 @@ mygame = Game()
 
 while mygame.running:
     mygame.events()
-    mygame.draw()
     mygame.tick()
+    if mygame.active:
+        mygame.draw()
+    mygame.wait()
 
 pygame.quit()
